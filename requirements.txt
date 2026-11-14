@@ -1,0 +1,8 @@
+# ─── MirrorX · Google Drive Mirror Bot ─────────────────────────────────────
+aiogram==3.31.0          # Telegram Bot API framework (supports <tg-emoji> + button icons)
+aiohttp==3.14.5          # async HTTP: Drive REST API, downloads, OAuth
+aiosqlite>=0.20.0        # async SQLite storage (users, tasks, tokens)
+python-dotenv>=1.0.1     # .env loader
+pyjwt[crypto]>=2.9.0     # RS256 signing for Google service-account tokens
+yt-dlp>=2025.1.1         # YouTube / 1000+ sites downloader
+imageio-ffmpeg>=0.5.1    # static ffmpeg so yt-dlp can mux 1080p+ anywhere

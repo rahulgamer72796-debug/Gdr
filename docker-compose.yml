@@ -1,0 +1,16 @@
+services:
+  mirrorx:
+    build: .
+    container_name: mirrorx
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./downloads:/app/downloads      # temp download space (needs disk!)
+      - ./data:/app/data                # sqlite db, service account, emoji catalogue
+    # If you raise MAX_CONCURRENT_TASKS, give the container more resources:
+    # deploy:
+    #   resources:
+    #     limits: { cpus: "2", memory: 2G }
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
